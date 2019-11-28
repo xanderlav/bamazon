@@ -21,13 +21,13 @@ function promptUserPurchase() {
 		{
 			type: 'input',
 			name: 'item_id',
-			message: 'Please enter the Item ID which you would like to purchase.',
+			message: 'Please type in the Item # which you would like to buy.',
 			filter: Number
 		},
 		{
 			type: 'input',
 			name: 'quantity',
-			message: 'How many do you need?',
+			message: 'How many do you want to buy?',
 			filter: Number
 		}
 	]).then(function(input) {
@@ -106,11 +106,9 @@ function displayStock() {
 
 // eBamazon execute the main application logic
 function eBamazon() {
-	// console.log('___ENTER eBamazon___');
-
 	// Display the available stock 
 	displayStock();
 }
 
-// Run the application logic
+// Executes the main program
 eBamazon();
