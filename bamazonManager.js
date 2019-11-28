@@ -69,7 +69,7 @@ function displayInventory() {
 		var strOut = '';
 		for (var i = 0; i < data.length; i++) {
 			strOut = '';
-			strOut += 'Item ID: ' + data[i].item_id + '  |  ';
+			strOut += 'Item #: ' + data[i].item_id + '  |  ';
 			strOut += 'Product Name: ' + data[i].product_name + '  |  ';
 			strOut += 'Department: ' + data[i].department_name + '  |  ';
 			strOut += 'Price: $' + data[i].price + '  |  ';
@@ -133,9 +133,8 @@ function validateNumeric(value) {
 
 // addInventory will guilde a user in adding additional quantify to an existing item
 function addInventory() {
-	// console.log('___ENTER addInventory___');
 
-	// Prompt the user to select an item
+	// The user should chose an item
 	inquirer.prompt([
 		{
 			type: 'input',

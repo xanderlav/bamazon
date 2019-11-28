@@ -49,7 +49,7 @@ function promptUserPurchase() {
 
 				// If the quantity requested by the user is in stock
 				if (quantity <= resultData.stock_quantity) {
-					console.log('Yey, the product you demand is in stock! Generating your order...|x| ');
+					console.log('Yey, the product you demand is in stock! Generating your order...|x|*|x| ');
 
 					// Generating the updating query string
 					var updateQryStatmnt = 'UPDATE products SET stock_quantity = ' + (resultData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
@@ -59,7 +59,7 @@ function promptUserPurchase() {
 					connection.query(updateQryStatmnt, function(err, data) {
 						if (err) throw err;
 
-						console.log('Your oder has been generated! Your total is $' + resultData.price * quantity);
+						console.log('Your oder has been generated! Your bill is $' + resultData.price * quantity);
 						console.log('Thanks for buying with bamazon, you are very important for us! ;) ');
 						console.log(`\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n`);
 
